@@ -5,7 +5,7 @@
 //  Created by Hany Arafa on 10/30/17.
 //  Copyright © 2017 Hany Arafa. All rights reserved.
 //
-
+import UIKit
 import XCTest
 
 class POC_iOSUITests: XCTestCase {
