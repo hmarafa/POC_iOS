@@ -82,7 +82,7 @@ class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate 
         }
         
         #if DEBUG
-            print("DISCOVERED BEAN \nName: \(bean.name), UUID: \(bean.identifier) RSSI: \(bean.rssi)")
+           print("DISCOVERED BEAN \nName: \(bean.name), UUID: \(bean.identifier) RSSI: \(bean.rssi)")
         #endif
     }
     

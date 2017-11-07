@@ -31,7 +31,7 @@ class ConnectionViewController: UIViewController, PTDBeanManagerDelegate, PTDBea
         beanManager!.delegate = self
     }
     
-    /* override func viewDidAppear(_ animated: Bool)
+     override func viewDidAppear(_ animated: Bool)
      {
      if(self.myBean != nil)
      {
@@ -49,7 +49,7 @@ class ConnectionViewController: UIViewController, PTDBeanManagerDelegate, PTDBea
      {
      print("Connection is made")
      }
-     }*/
+     }
     
     
     func beanManagerDidUpdateState(_ beanManager: PTDBeanManager!)
@@ -95,8 +95,8 @@ class ConnectionViewController: UIViewController, PTDBeanManagerDelegate, PTDBea
                 //       beanDiscovered = true
                 viewDidAppear(true)
                 myBean = bean
-                //beanManager!.connect(to: bean, withOptions:nil, error: nil)
-                //     bean.delegate = self
+                beanManager!.connect(to: bean, withOptions:nil, error: nil)
+                //    bean.delegate = self
             }
         }
         

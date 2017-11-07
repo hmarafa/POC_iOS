@@ -7,7 +7,30 @@
 		<key>POC_iOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>35100C561FB11BD000F24098</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3562E9291FA7F17700B82CF7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3562E9401FA7F17700B82CF7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3562E94B1FA7F17800B82CF7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

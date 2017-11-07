@@ -31,7 +31,7 @@ class IDViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegat
         formatter.dateStyle = .short
         
         // get the date time String from the date object
-        let result = formatter.string(from: currentDateTime) // October 8, 2016 at 10:48:53 PM
+        let result = formatter.string(from: currentDateTime) // October 8, 2017 at 10:48:53 PM
         
         dateAndTimeLabel.text = result
         

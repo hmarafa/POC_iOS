@@ -1,20 +1,20 @@
 //
-//  POC_iOSUITests.swift
-//  POC_iOSUITests
+//  POC_iOSUITest.swift
+//  POC_iOSUITest
 //
-//  Created by Hany Arafa on 10/30/17.
+//  Created by Hany Arafa on 11/6/17.
 //  Copyright © 2017 Hany Arafa. All rights reserved.
 //
-import UIKit
+
 import XCTest
 
-class POC_iOSUITests: XCTestCase {
-      var app: XCUIApplication!
+class POC_iOSUITest: XCTestCase {
+  var app: XCUIApplication!
     override func setUp() {
         super.setUp()
         
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        app = XCUIApplication()
+         app = XCUIApplication()
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
@@ -27,17 +27,17 @@ class POC_iOSUITests: XCTestCase {
         app.launchArguments.append("skipEntryViewController")
         // Make sure we're displaying onboarding
         //XCTAssertTrue(app.isDisplayingOnboarding)
-                
+        
         // Swipe left three times to go through the pages
         //app.buttons["Connect"].tap()
         //app.swipeLeft()
-        
+     
         
         // Tap the "Done" button
-        //XCUIApplication().buttons["Connect"].tap()
-      
-        // XCTAssert(app.connecttoBean.exists)
-        //app.buttons["Done"].tap()
+        XCUIApplication().buttons["Connect"].tap()
+        XCUIApplication().buttons["Connect"].tap()
+               // XCTAssert(app.connecttoBean.exists)
+                        //app.buttons["Done"].tap()
         
         // Onboarding should no longer be displayed
         //XCTAssertFalse(app.isDisplayingOnboarding)

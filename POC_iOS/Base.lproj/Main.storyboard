@@ -67,7 +67,8 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4w-mT-R6t">
-                                <rect key="frame" x="118" y="494" width="139" height="53"/>
+                                <rect key="frame" x="118" y="512" width="139" height="53"/>
+                                <accessibility key="accessibilityConfiguration" label="Connect"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="NI1-7l-djB"/>
                                     <constraint firstAttribute="width" constant="139" id="qU0-de-Muq"/>
@@ -81,8 +82,8 @@
                                     <segue destination="HGy-nz-OVw" kind="presentation" identifier="transferToPatientScreen" id="2jd-13-Wwl"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Not Connected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laB-Qo-fkt">
-                                <rect key="frame" x="54" y="331" width="267" height="41"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" text="Not Connected" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="laB-Qo-fkt">
+                                <rect key="frame" x="0.0" y="335" width="375" height="99"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="35"/>
                                 <color key="textColor" red="1" green="0.77647058820000003" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -96,9 +97,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="tFe-VN-Ggz" secondAttribute="trailing" constant="15" id="6xT-ui-UwX"/>
                             <constraint firstItem="rRU-5K-wFh" firstAttribute="top" secondItem="rNR-5x-EgW" secondAttribute="bottom" constant="20" id="6zK-Jc-DaW"/>
                             <constraint firstItem="c1a-UA-7eW" firstAttribute="top" secondItem="Puu-nO-aFB" secondAttribute="bottom" id="Bx4-tj-8HN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="laB-Qo-fkt" secondAttribute="trailing" constant="129" id="CQN-FE-H6v"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="laB-Qo-fkt" secondAttribute="trailing" constant="2" id="CQN-FE-H6v"/>
                             <constraint firstItem="c1a-UA-7eW" firstAttribute="centerY" secondItem="k8b-H7-qXq" secondAttribute="centerY" id="EI4-2Q-RnR"/>
-                            <constraint firstItem="W4w-mT-R6t" firstAttribute="top" secondItem="laB-Qo-fkt" secondAttribute="bottom" constant="122" id="G74-NX-Ma6"/>
+                            <constraint firstItem="W4w-mT-R6t" firstAttribute="top" secondItem="laB-Qo-fkt" secondAttribute="bottom" constant="140" id="G74-NX-Ma6"/>
                             <constraint firstItem="vxo-wP-Fa8" firstAttribute="trailing" secondItem="2p4-dz-pW8" secondAttribute="trailingMargin" id="Gam-hO-rev"/>
                             <constraint firstAttribute="trailing" secondItem="c1a-UA-7eW" secondAttribute="trailing" id="K45-hf-fyF"/>
                             <constraint firstItem="vxo-wP-Fa8" firstAttribute="top" secondItem="c1a-UA-7eW" secondAttribute="bottom" constant="76" id="Ldr-Rq-zPT"/>
@@ -108,7 +109,7 @@
                             <constraint firstItem="laB-Qo-fkt" firstAttribute="top" secondItem="vxo-wP-Fa8" secondAttribute="bottom" constant="38" id="er2-zz-KGx"/>
                             <constraint firstItem="vxo-wP-Fa8" firstAttribute="leading" secondItem="2p4-dz-pW8" secondAttribute="leadingMargin" id="srM-mj-OVL"/>
                             <constraint firstItem="rNR-5x-EgW" firstAttribute="centerX" secondItem="2p4-dz-pW8" secondAttribute="centerX" id="wvx-I3-aIU"/>
-                            <constraint firstItem="laB-Qo-fkt" firstAttribute="leading" secondItem="2p4-dz-pW8" secondAttribute="leadingMargin" constant="128" id="yG4-Gr-TLG"/>
+                            <constraint firstItem="laB-Qo-fkt" firstAttribute="leading" secondItem="2p4-dz-pW8" secondAttribute="leadingMargin" constant="2" id="yG4-Gr-TLG"/>
                         </constraints>
                     </view>
                     <connections>
@@ -193,8 +194,9 @@
                                     <constraint firstAttribute="height" constant="60" id="OQa-8l-Y40"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Akhila 1020" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eg8-ps-PK5">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Hany112" borderStyle="roundedRect" placeholder="Akhila 1020" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eg8-ps-PK5">
                                 <rect key="frame" x="235" y="245" width="124" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="TextField"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="124" id="CfS-Ss-wRY"/>
                                 </constraints>
