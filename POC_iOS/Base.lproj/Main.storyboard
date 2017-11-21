@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Tbj-Y1-GjB">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Tbj-Y1-GjB">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -27,24 +27,24 @@
                         <viewControllerLayoutGuide type="bottom" id="rRU-5K-wFh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2p4-dz-pW8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please click connect when your correct Bean appears:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxo-wP-Fa8">
-                                <rect key="frame" x="16" y="171" width="343" height="122"/>
+                                <rect key="frame" x="20" y="171" width="374" height="122"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="35"/>
                                 <color key="textColor" red="0.39295888509999999" green="0.024091594970000001" blue="0.084917323409999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1a-UA-7eW">
-                                <rect key="frame" x="0.0" y="20" width="375" height="75"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="75"/>
                                 <color key="backgroundColor" red="0.39295888509999999" green="0.024091594970000001" blue="0.084917323409999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.39295888509999999" green="0.024091594970000001" blue="0.084917323409999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FlexDx" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8b-H7-qXq">
-                                <rect key="frame" x="10" y="37" width="131" height="41"/>
+                                <rect key="frame" x="14" y="37" width="131" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="CUi-lx-dtg"/>
                                     <constraint firstAttribute="width" constant="131" id="H7V-lU-BHQ"/>
@@ -54,20 +54,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFe-VN-Ggz">
-                                <rect key="frame" x="30" y="88" width="314" height="0.0"/>
+                                <rect key="frame" x="34" y="88" width="345" height="0.0"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="30"/>
                                 <color key="textColor" red="0.39295888509999999" green="0.024091594970000001" blue="0.084917323409999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asu_fultonengineering_horiz_rgb_maroongold_150ppi" translatesAutoresizingMaskIntoConstraints="NO" id="rNR-5x-EgW">
-                                <rect key="frame" x="116" y="587" width="143" height="60"/>
+                                <rect key="frame" x="135.66666666666666" y="656" width="142.99999999999997" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="143" id="0If-hx-i8i"/>
                                     <constraint firstAttribute="height" constant="60" id="Lho-D5-n9v"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4w-mT-R6t">
-                                <rect key="frame" x="118" y="512" width="139" height="53"/>
+                                <rect key="frame" x="122" y="511.66666666666674" width="139" height="53"/>
                                 <accessibility key="accessibilityConfiguration" label="Connect"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="NI1-7l-djB"/>
@@ -130,7 +130,7 @@
                         <viewControllerLayoutGuide type="bottom" id="8bA-bH-RdB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="i7W-kA-8sR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please Enter Patient ID:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bv3-WP-qJ0">
@@ -139,8 +139,59 @@
                                 <color key="textColor" red="0.39295888509999999" green="0.024091594970000001" blue="0.084917323409999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date / Time: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iM7-P4-BXg">
+                                <rect key="frame" x="8" y="340" width="369" height="71"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="35"/>
+                                <color key="textColor" red="0.39295888509999999" green="0.024091594970000001" blue="0.084917323409999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Sc-DH-1pK">
+                                <rect key="frame" x="8" y="383" width="380" height="105"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="35"/>
+                                <color key="textColor" red="0.39295888509999999" green="0.024091594970000001" blue="0.084917323409999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWe-N3-rQ7">
+                                <rect key="frame" x="0.0" y="20" width="414" height="75"/>
+                                <color key="backgroundColor" red="0.39295888509999999" green="0.024091594970000001" blue="0.084917323409999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.39295888509999999" green="0.024091594970000001" blue="0.084917323409999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FlexDx" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="au7-tP-Pnq">
+                                <rect key="frame" x="14" y="37" width="131" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="131" id="LKX-wg-LB3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="40"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are now connected to Bean." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ni-n8-Y7h">
+                                <rect key="frame" x="61" y="106" width="296" height="70"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="30"/>
+                                <color key="textColor" red="1" green="0.77647058820000003" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asu_fultonengineering_horiz_rgb_maroongold_150ppi" translatesAutoresizingMaskIntoConstraints="NO" id="s1i-Pt-QOf">
+                                <rect key="frame" x="135.66666666666666" y="656" width="142.99999999999997" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="143" id="LW1-dQ-UVf"/>
+                                    <constraint firstAttribute="height" constant="60" id="OQa-8l-Y40"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Hany112" borderStyle="roundedRect" placeholder="UserID" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eg8-ps-PK5">
+                                <rect key="frame" x="235" y="245" width="124" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="TextField"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="CfS-Ss-wRY"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sya-2B-S1l">
-                                <rect key="frame" x="135" y="496" width="109" height="53"/>
+                                <rect key="frame" x="155" y="564" width="109" height="53"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="109" id="gZd-dK-K6B"/>
@@ -153,57 +204,6 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="idSegue" id="X3H-Un-eTg"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date / Time: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iM7-P4-BXg">
-                                <rect key="frame" x="16" y="340.5" width="217" height="35"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="35"/>
-                                <color key="textColor" red="0.39295888509999999" green="0.024091594970000001" blue="0.084917323409999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Sc-DH-1pK">
-                                <rect key="frame" x="16" y="383" width="343" height="41"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="35"/>
-                                <color key="textColor" red="0.39295888509999999" green="0.024091594970000001" blue="0.084917323409999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWe-N3-rQ7">
-                                <rect key="frame" x="0.0" y="20" width="375" height="75"/>
-                                <color key="backgroundColor" red="0.39295888509999999" green="0.024091594970000001" blue="0.084917323409999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.39295888509999999" green="0.024091594970000001" blue="0.084917323409999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FlexDx" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="au7-tP-Pnq">
-                                <rect key="frame" x="10" y="37" width="131" height="41"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="131" id="LKX-wg-LB3"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="40"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are now connected to Bean." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ni-n8-Y7h">
-                                <rect key="frame" x="57" y="106" width="265" height="70"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="30"/>
-                                <color key="textColor" red="1" green="0.77647058820000003" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asu_fultonengineering_horiz_rgb_maroongold_150ppi" translatesAutoresizingMaskIntoConstraints="NO" id="s1i-Pt-QOf">
-                                <rect key="frame" x="116" y="587" width="143" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="143" id="LW1-dQ-UVf"/>
-                                    <constraint firstAttribute="height" constant="60" id="OQa-8l-Y40"/>
-                                </constraints>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Hany112" borderStyle="roundedRect" placeholder="Akhila 1020" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eg8-ps-PK5">
-                                <rect key="frame" x="235" y="245" width="124" height="30"/>
-                                <accessibility key="accessibilityConfiguration" label="TextField"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="124" id="CfS-Ss-wRY"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -242,7 +242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jsc-rI-kbn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1058.4000000000001" y="-26.53673163418291"/>
+            <point key="canvasLocation" x="-1059.4202898550725" y="-26.90217391304348"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -253,11 +253,11 @@
                         <viewControllerLayoutGuide type="bottom" id="6tk-3r-c9f"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MsR-5K-O29">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMo-fh-JRg">
-                                <rect key="frame" x="64" y="184" width="248" height="33"/>
+                                <rect key="frame" x="83.666666666666686" y="184" width="248" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="248" id="WgK-ce-olm"/>
                                     <constraint firstAttribute="height" constant="33" id="uwF-Ed-Lbh"/>
@@ -267,14 +267,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oiI-Wp-CAz">
-                                <rect key="frame" x="0.0" y="20" width="375" height="81"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="81"/>
                                 <color key="backgroundColor" red="0.39295888509999999" green="0.024091594970000001" blue="0.084917323409999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.39295888509999999" green="0.024091594970000001" blue="0.084917323409999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FlexDx" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZz-WE-VIx">
-                                <rect key="frame" x="10" y="37" width="131" height="47"/>
+                                <rect key="frame" x="14" y="37" width="131" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="131" id="IbG-4c-tB5"/>
                                 </constraints>
@@ -283,7 +283,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMC-EN-tVb">
-                                <rect key="frame" x="133" y="240.5" width="109" height="33"/>
+                                <rect key="frame" x="152.66666666666666" y="240.33333333333337" width="108.99999999999997" height="33"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="28"/>
                                 <color key="textColor" red="1" green="0.77647058823529413" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -294,14 +294,8 @@
                                 <color key="textColor" red="0.39295888509999999" green="0.024091594970000001" blue="0.084917323409999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Percentage Complete:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jy2-ta-CQj">
-                                <rect key="frame" x="1" y="398" width="374" height="56"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="35"/>
-                                <color key="textColor" red="1" green="0.77647058820000003" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asu_fultonengineering_horiz_rgb_maroongold_150ppi" translatesAutoresizingMaskIntoConstraints="NO" id="svt-t2-GUj">
-                                <rect key="frame" x="116" y="587" width="143" height="60"/>
+                                <rect key="frame" x="135.66666666666666" y="656" width="142.99999999999997" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="It8-RQ-654"/>
                                     <constraint firstAttribute="width" constant="143" id="hyV-yT-lmw"/>
@@ -352,6 +346,12 @@
                                     <action selector="pressButtonToChangeValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aJY-je-tL5"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Percentage Complete:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jy2-ta-CQj">
+                                <rect key="frame" x="9" y="398" width="374" height="56"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="35"/>
+                                <color key="textColor" red="1" green="0.77647058820000003" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -408,11 +408,11 @@
                         <viewControllerLayoutGuide type="bottom" id="6ai-4x-OHT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0Ra-dv-hha">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Esc-fe-7Cj">
-                                <rect key="frame" x="33" y="50" width="36" height="32"/>
+                                <rect key="frame" x="37" y="50" width="36" height="32"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                 <state key="normal" title="Back">
@@ -423,7 +423,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your data has now been saved locally. You can send it to a health care provider below." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0iP-5L-SHJ">
-                                <rect key="frame" x="29" y="289" width="322" height="149"/>
+                                <rect key="frame" x="33" y="289" width="353" height="149"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="149" id="OcH-lE-K62"/>
@@ -433,14 +433,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j13-yP-chZ">
-                                <rect key="frame" x="247" y="126" width="112" height="41"/>
+                                <rect key="frame" x="282" y="126" width="112" height="41"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="35"/>
                                 <color key="textColor" red="0.39295888509999999" green="0.024091594970000001" blue="0.084917323409999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5i-fi-F5E">
-                                <rect key="frame" x="273" y="227" width="86" height="41"/>
+                                <rect key="frame" x="308" y="227" width="86" height="41"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="35"/>
                                 <color key="textColor" red="0.39295888509999999" green="0.024091594970000001" blue="0.084917323409999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -461,7 +461,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qgt-Dt-Ztz">
-                                <rect key="frame" x="273" y="180" width="86" height="41"/>
+                                <rect key="frame" x="308" y="180" width="86" height="41"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="35"/>
                                 <color key="textColor" red="0.39295888509999999" green="0.024091594970000001" blue="0.084917323409999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -482,7 +482,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DxApp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UX1-lS-Hjz">
-                                <rect key="frame" x="10" y="37" width="131" height="47"/>
+                                <rect key="frame" x="14" y="37" width="131" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="131" id="EFd-H9-Mu3"/>
                                 </constraints>
@@ -491,14 +491,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssf-N9-e2N">
-                                <rect key="frame" x="0.0" y="20" width="375" height="81"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="81"/>
                                 <color key="backgroundColor" red="0.39295888509999999" green="0.024091594970000001" blue="0.084917323409999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.39295888509999999" green="0.024091594970000001" blue="0.084917323409999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FlexDx" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yut-eq-gGI">
-                                <rect key="frame" x="10" y="37" width="131" height="47"/>
+                                <rect key="frame" x="14" y="37" width="131" height="47"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="40"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -514,7 +514,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asu_fultonengineering_horiz_rgb_maroongold_150ppi" translatesAutoresizingMaskIntoConstraints="NO" id="qk4-tU-LWY" userLabel="asu_fultonengineering_horiz_rgb_maroongold_150ppi">
-                                <rect key="frame" x="116" y="587" width="143" height="60"/>
+                                <rect key="frame" x="135.66666666666666" y="656" width="142.99999999999997" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="143" id="c4q-3p-aid"/>
                                     <constraint firstAttribute="height" constant="60" id="w3t-Oc-fzI"/>

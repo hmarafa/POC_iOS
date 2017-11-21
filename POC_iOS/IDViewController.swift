@@ -12,6 +12,8 @@ import CoreBluetooth
 class IDViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate  {
     
     @IBOutlet weak var userID: UITextField!
+    
+
     //  var beanManager: PTDBeanManager!
     // var myBean: PTDBean!
     
@@ -20,7 +22,7 @@ class IDViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegat
     {
         super.viewDidLoad()
         // let date = NSDate()
-        //  let calender = NSCalendar.current
+        //  let calendar = NSCalendar.current
         //  let components = calender.components([.Hour, .Minute], fromDate: date)
         
         let currentDateTime = Date()
@@ -53,6 +55,7 @@ class IDViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegat
         {
             let controller = segue.destination as! ViewController
             controller.userID = userID.text!
+            
             controller.dateString = dateAndTimeLabel.text!
             //controller.myBean = myBean
             print(dateAndTimeLabel.text)
