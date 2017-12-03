@@ -10,12 +10,14 @@ import UIKit
 import Bean_iOS_OSX_SDK
 import CoreBluetooth
 
-class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate {
+
+class ViewController: UIViewController, UITextFieldDelegate, PTDBeanManagerDelegate, PTDBeanDelegate {
     
     @IBOutlet weak var percentUpdate: UILabel!
     @IBOutlet weak var valueFromBean: UILabel!
     var beanManager: PTDBeanManager!
-    var userID: String = ""
+    var userID: UITextField!
+    
     var maxValue: String = " "
     var dateString: String = " "
     @IBOutlet weak var timeTaken: UILabel!
@@ -29,19 +31,28 @@ class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate 
     var newLine: String = ""
     var csvText = ""
     
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         beanManager = PTDBeanManager()
         beanManager!.delegate = self
         lightState = false
+        
+        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+        //tap.cancelsTouchesInView = false
+       
         //make the csv up here
     }
     
+    //optional func textFieldDidEndEditing(_ textField: UITextField)
     
     func beanManagerDidUpdateState(_ beanManager: PTDBeanManager!)
     {
@@ -103,6 +114,8 @@ class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate 
                     let alertController = UIAlertController(title: "iOScreator", message:
                         "Bluetooth is disconnecected. Please check your connection.", preferredStyle: UIAlertControllerStyle.alert)
                     alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+                    self.present(alertController, animated: true, completion: nil)
+                
                 }
             }
         });
@@ -265,7 +278,7 @@ class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate 
     
     @IBAction func pressButtonToChangeValue(_ sender: Any)
     {
-        testProgressLabel.text = "Test is in Progress. Please Wait."
+        testProgressLabel.text = "Test in Progress"
         print(testProgressLabel.text)
         newLine = ""
         print ("hi")
@@ -295,14 +308,14 @@ class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate 
             let emailViewController = segue.destination as? EmailViewController
             emailViewController?.csvText = csvText
             print(userID)
-            emailViewController?.userIDString = userID
+            emailViewController?.userID.text = userID.text
             emailViewController?.mPML = maxValue
             emailViewController?.dTL = dateString
-            print(emailViewController?.userIDString)
+            print(emailViewController?.userID.text as Any)
         }
     }
+}
     
-    }   
 
 
 

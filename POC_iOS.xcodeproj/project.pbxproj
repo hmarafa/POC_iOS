@@ -21,6 +21,7 @@
 		3562E9611FA7F3DB00B82CF7 /* IDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3562E9601FA7F3DB00B82CF7 /* IDViewController.swift */; };
 		3562E9631FA7F40A00B82CF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3562E9621FA7F40A00B82CF7 /* ViewController.swift */; };
 		3562E9661FB0394300B82CF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3562E9641FB0394300B82CF7 /* Main.storyboard */; };
+		35A8A5C01FD4A712003357C2 /* extensionkeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A8A5BF1FD4A712003357C2 /* extensionkeyboard.swift */; };
 		8E5346EE02A3C55746729110 /* Pods_POC_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4B1617EECC207FA23E41913 /* Pods_POC_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		3562E9601FA7F3DB00B82CF7 /* IDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDViewController.swift; sourceTree = "<group>"; };
 		3562E9621FA7F40A00B82CF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3562E9651FB0394300B82CF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		35A8A5BF1FD4A712003357C2 /* extensionkeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionkeyboard.swift; sourceTree = "<group>"; };
 		4E3066F2E776F19E0E4C5682 /* Pods-POC_iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POC_iOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-POC_iOSUITests/Pods-POC_iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5A7B6D93B5A4EC11B27EB84A /* Pods-POC_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POC_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-POC_iOS/Pods-POC_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		5CB7749A76D178FAD60A75D9 /* Pods_POC_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_POC_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,6 +158,7 @@
 				3562E92F1FA7F17700B82CF7 /* ConnectionViewController.swift */,
 				3562E95E1FA7F3AD00B82CF7 /* EmailViewController.swift */,
 				3562E9601FA7F3DB00B82CF7 /* IDViewController.swift */,
+				35A8A5BF1FD4A712003357C2 /* extensionkeyboard.swift */,
 				3562E9641FB0394300B82CF7 /* Main.storyboard */,
 				3562E9371FA7F17700B82CF7 /* Assets.xcassets */,
 				3562E9391FA7F17700B82CF7 /* LaunchScreen.storyboard */,
@@ -528,6 +531,7 @@
 			files = (
 				3562E9631FA7F40A00B82CF7 /* ViewController.swift in Sources */,
 				3562E9301FA7F17700B82CF7 /* ConnectionViewController.swift in Sources */,
+				35A8A5C01FD4A712003357C2 /* extensionkeyboard.swift in Sources */,
 				3562E9361FA7F17700B82CF7 /* POC_iOS.xcdatamodeld in Sources */,
 				3562E9611FA7F3DB00B82CF7 /* IDViewController.swift in Sources */,
 				3562E92E1FA7F17700B82CF7 /* AppDelegate.swift in Sources */,

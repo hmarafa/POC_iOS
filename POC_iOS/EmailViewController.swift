@@ -15,11 +15,12 @@ class EmailViewController: UIViewController, MFMailComposeViewControllerDelegate
     var dTL: String = " "
     @IBOutlet weak var moleculesPerMicroL: UILabel!
     var mPML: String = " "
-    @IBOutlet weak var userID: UILabel!
+    @IBOutlet weak var userID: UITextField!
     var userIDString: String = " "
     var csvText : String = " "
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         userID.text = userIDString
         moleculesPerMicroL.text = mPML
         dateTimeLabel.text = dTL
@@ -81,8 +82,8 @@ class EmailViewController: UIViewController, MFMailComposeViewControllerDelegate
         if segue.identifier == "backToTest"
         {
             let controller = segue.destination as! ViewController
-            controller.userID = userID.text!
-            print(userID.text)
+            controller.userID.text = userID.text!
+            print(userID.text as Any)
             controller.dateString = dateTimeLabel.text!
         }
     }

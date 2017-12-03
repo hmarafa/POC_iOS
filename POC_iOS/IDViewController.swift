@@ -12,7 +12,6 @@ import CoreBluetooth
 class IDViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate  {
     
     @IBOutlet weak var userID: UITextField!
-    
 
     //  var beanManager: PTDBeanManager!
     // var myBean: PTDBean!
@@ -21,6 +20,7 @@ class IDViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegat
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         // let date = NSDate()
         //  let calendar = NSCalendar.current
         //  let components = calender.components([.Hour, .Minute], fromDate: date)
@@ -49,16 +49,29 @@ class IDViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegat
         // Dispose of any resources that can be recreated.
     }
     
+  
+    func textFieldShouldReturn(userID: UITextField) -> Bool {
+        userID.resignFirstResponder()
+        return true
+    }
+    
+    /**
+     * Called when the user click on the view (outside the UITextField).
+ 
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }*/
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         if segue.identifier == "idSegue"
         {
             let controller = segue.destination as! ViewController
-            controller.userID = userID.text!
+            //controller.userID = userID.text!
             
             controller.dateString = dateAndTimeLabel.text!
             //controller.myBean = myBean
-            print(dateAndTimeLabel.text)
+            print(dateAndTimeLabel.text as Any)
         }
     }
     

@@ -27,6 +27,7 @@ class ConnectionViewController: UIViewController, PTDBeanManagerDelegate, PTDBea
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         beanManager = PTDBeanManager()
         beanManager!.delegate = self
     }
@@ -81,6 +82,7 @@ class ConnectionViewController: UIViewController, PTDBeanManagerDelegate, PTDBea
     {
         beanManager!.connect(to: myBean, withOptions:nil, error: nil)
         myBean.delegate = self
+        
         connectionLabel.text = "You are now connected"
     }
     
@@ -99,6 +101,7 @@ class ConnectionViewController: UIViewController, PTDBeanManagerDelegate, PTDBea
                 //    bean.delegate = self
             }
         }
+        
         
         #if DEBUG
             print("DISCOVERED BEAN \nName: \(bean.name), UUID: \(bean.identifier) RSSI: \(bean.rssi)")
