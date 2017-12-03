@@ -54,6 +54,11 @@ class ViewController: UIViewController, UITextFieldDelegate, PTDBeanManagerDeleg
     
     //optional func textFieldDidEndEditing(_ textField: UITextField)
     
+    func textFieldShouldReturn( userID : UITextField) -> Bool {
+        userID.resignFirstResponder()
+        return true
+    }
+    
     func beanManagerDidUpdateState(_ beanManager: PTDBeanManager!)
     {
         let scanError: NSError?

@@ -32,6 +32,11 @@ class ConnectionViewController: UIViewController, PTDBeanManagerDelegate, PTDBea
         beanManager!.delegate = self
     }
     
+    func textFieldShouldReturn( userID : UITextField) -> Bool {
+        userID.resignFirstResponder()
+        return true
+    }
+    
      override func viewDidAppear(_ animated: Bool)
      {
      if(self.myBean != nil)
