@@ -86,7 +86,28 @@ class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate 
         #endif
     }
     
-    
+    func connectionChanged(_ notification: Notification) {
+        // Connection status changed. Indicate on GUI.
+        let userInfo = (notification as NSNotification).userInfo as! [String: Bool]
+        
+        DispatchQueue.main.async(execute: {
+            // Set image based on connection status
+            if let isConnected: Bool = userInfo["isConnected"] {
+                if isConnected {
+                    let alertController = UIAlertController(title: "iOScreator", message:
+                        "Hello, world!", preferredStyle: UIAlertControllerStyle.alert)
+                    alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+                    
+                }
+                else {
+                    let alertController = UIAlertController(title: "iOScreator", message:
+                        "Bluetooth is disconnecected. Please check your connection.", preferredStyle: UIAlertControllerStyle.alert)
+                    alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+                }
+            }
+        });
+    }
+
     
     
     
@@ -225,7 +246,7 @@ class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate 
          [self.consoleOutputTextView scrollRangeToVisible: NSMakeRange(self.consoleOutputTextView.string.length, 0)];*/
     }
     
-    @IBAction func saveData(_ sender: Any)
+        func saveData(_ sender: Any)
     {
         let fileName = "TimeData.csv"
         let path = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(fileName)
@@ -281,7 +302,7 @@ class ViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate 
         }
     }
     
-}
+    }   
 
 
 
