@@ -120,14 +120,15 @@ class ConnectionViewController: UIViewController, PTDBeanManagerDelegate, PTDBea
     
     
     
-    /*  override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
      {
      if segue.identifier == "transferToPatientScreen"
      {
      let controller = segue.destination as! IDViewController
-     controller.myBean = myBean
+      //controller.dateString = dateAndTimeLabel.text!
+        //IDViewController.myBean = myBean
      }
-     }*/
+     }
     
     
 }

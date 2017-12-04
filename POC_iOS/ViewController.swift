@@ -9,9 +9,11 @@
 import UIKit
 import Bean_iOS_OSX_SDK
 import CoreBluetooth
-
+import UICircularProgressRing
 
 class ViewController: UIViewController, UITextFieldDelegate, PTDBeanManagerDelegate, PTDBeanDelegate {
+
+    
     
     @IBOutlet weak var percentUpdate: UILabel!
     @IBOutlet weak var valueFromBean: UILabel!
@@ -36,8 +38,6 @@ class ViewController: UIViewController, UITextFieldDelegate, PTDBeanManagerDeleg
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,7 +84,6 @@ class ViewController: UIViewController, UITextFieldDelegate, PTDBeanManagerDeleg
         }
     }
     
-    
     func beanManager(_ beanManager: PTDBeanManager!, didDiscover bean: PTDBean!, error: Error!) {
         if myBean == nil {
             if bean.state == .discovered {
@@ -101,8 +100,15 @@ class ViewController: UIViewController, UITextFieldDelegate, PTDBeanManagerDeleg
            print("DISCOVERED BEAN \nName: \(bean.name), UUID: \(bean.identifier) RSSI: \(bean.rssi)")
         #endif
     }
+    func BeanManager(beanManager: PTDBeanManager!, didConnectToBean bean: PTDBean!, error: NSError!) {
+        
+    }
     
-    func connectionChanged(_ notification: Notification) {
+    func BeanManager(beanManager: PTDBeanManager!, didDisconnectBean bean: PTDBean!, error: NSError!) {
+        
+    }
+    
+/*    func connectionChanged(_ notification: Notification) {
         // Connection status changed. Indicate on GUI.
         let userInfo = (notification as NSNotification).userInfo as! [String: Bool]
         
@@ -126,7 +132,7 @@ class ViewController: UIViewController, UITextFieldDelegate, PTDBeanManagerDeleg
         });
     }
 
-    
+    */
     
     
     /* func bean(_ bean: PTDBean!, serialDataReceived data: Data!)
@@ -171,12 +177,12 @@ class ViewController: UIViewController, UITextFieldDelegate, PTDBeanManagerDeleg
             print ("Received Data")
         }
         
-        var stringData : String = NSString(data: data, encoding : String.Encoding.ascii.rawValue) as! String
+        let stringData : String = NSString(data: data, encoding : String.Encoding.ascii.rawValue)! as String
         if(stringData == "The time is")
         {
             displayTime = true
-            //  var stringData : String = NSString(data: data, encoding : String.Encoding.ascii.rawValue) as! String
-            //  timeTaken.text? = stringData
+              var stringData : String = NSString(data: data, encoding : String.Encoding.ascii.rawValue) as! String
+            timeTaken.text? = stringData
         }
         else if(stringData == "Done")
         {
@@ -199,7 +205,7 @@ class ViewController: UIViewController, UITextFieldDelegate, PTDBeanManagerDeleg
             
             if stringData.rangeOfCharacter(from: numbers) == nil
             {
-                let newValue = (Double(stringData)! / 1000.0) * 100
+                let newValue = (Double(stringData)! / 100.0) * 100
                 print("HIIII")
                 print(newValue)
                 percentUpdate.text = String(newValue)
@@ -211,7 +217,7 @@ class ViewController: UIViewController, UITextFieldDelegate, PTDBeanManagerDeleg
                 maxValue = stringData
                 lastValue = false
             }
-            else if(displayTime == true)
+            else if(lastValue == true)
             {
                 testProgressLabel.text = "Test is completed."
                 timeTaken.text? = stringData
@@ -303,20 +309,25 @@ class ViewController: UIViewController, UITextFieldDelegate, PTDBeanManagerDeleg
         print("debugging")
         let data = NSData(bytes: &lightState, length: MemoryLayout<Bool>.size)
         sendSerialData(beanState: data)
-        
+        performSegue(withIdentifier: "transfertoEmail", sender: self)
+
+    }
+    @IBAction func viewresult(_ sender: Any) {
+        performSegue(withIdentifier: "transfertoEmail", sender: self)
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         if segue.identifier == "transferToEmail"
         {
-            let emailViewController = segue.destination as? EmailViewController
-            emailViewController?.csvText = csvText
-            print(userID)
-            emailViewController?.userID.text = userID.text
-            emailViewController?.mPML = maxValue
-            emailViewController?.dTL = dateString
-            print(emailViewController?.userID.text as Any)
+            let controller = segue.destination as? EmailViewController
+           controller?.csvText = csvText
+            //print(userID)
+            controller?.userID.text = userID.text
+            controller?.mPML = maxValue
+            controller?.dTL = dateString
+            //print(emailViewController?.userID.text as Any)
         }
     }
 }

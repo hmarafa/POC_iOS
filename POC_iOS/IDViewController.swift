@@ -13,8 +13,8 @@ class IDViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegat
     
     @IBOutlet weak var userID: UITextField!
 
-    //  var beanManager: PTDBeanManager!
-    // var myBean: PTDBean!
+    var beanManager: PTDBeanManager!
+    var myBean: PTDBean!
     
     @IBOutlet weak var dateAndTimeLabel: UILabel!
     override func viewDidLoad()
