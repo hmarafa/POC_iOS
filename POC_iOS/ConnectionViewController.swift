@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ConnectionViewController.swift
 //  POC_iOS
 //
 //  Created by Hany Arafa on 10/30/17.
@@ -10,10 +10,11 @@ import UIKit
 import Bean_iOS_OSX_SDK
 import CoreBluetooth
 
+
 class ConnectionViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegate
 {
-    var beanManager: PTDBeanManager!
-    var myBean: PTDBean!
+    var beanManager: PTDBeanManager?
+    var myBean: PTDBean?
     
     @IBOutlet weak var connectionLabel: UILabel!
     
@@ -41,7 +42,7 @@ class ConnectionViewController: UIViewController, PTDBeanManagerDelegate, PTDBea
      {
      if(self.myBean != nil)
      {
-     beanManager.disconnectBean(myBean, error: nil)
+        beanManager?.disconnectBean(myBean, error: nil)
      self.myBean = nil
      }
      
@@ -57,6 +58,17 @@ class ConnectionViewController: UIViewController, PTDBeanManagerDelegate, PTDBea
      }
      }
     
+    func update() {
+        if (self.myBean!.state == .discovered) {
+            //self.connectToBean.title = "Connect"
+            self.connectionLabel.isEnabled = true
+            
+        } else if (self.myBean!.state == .connectedAndValidated ) {
+            //self.connectToBean.title = "Disconnect"
+            self.connectionLabel.isEnabled = true
+        }
+        
+    }
     
     func beanManagerDidUpdateState(_ beanManager: PTDBeanManager!)
     {
@@ -67,6 +79,7 @@ class ConnectionViewController: UIViewController, PTDBeanManagerDelegate, PTDBea
             startScanning()
             print("made it here part 2")
         }
+        
     }
     
     func startScanning()
@@ -85,9 +98,15 @@ class ConnectionViewController: UIViewController, PTDBeanManagerDelegate, PTDBea
     
     @IBAction func connectToBean(_ sender: Any)
     {
-        beanManager!.connect(to: myBean, withOptions:nil, error: nil)
-        myBean.delegate = self
         
+            //self.myBean!.delegate = self
+            //beanManager!.connect(to: myBean, withOptions:nil, error: nil)
+            //myBean?.delegate = self
+            //self.connectionLabel.isEnabled = false
+            
+    
+      beanManager!.connect(to: myBean, withOptions:nil, error: nil)
+        myBean?.delegate = self
         connectionLabel.text = "You are now connected"
     }
     
@@ -113,7 +132,53 @@ class ConnectionViewController: UIViewController, PTDBeanManagerDelegate, PTDBea
         #endif
     }
     
+    func beanManager(_ beanManager: PTDBeanManager!, didConnect bean: PTDBean!, error: Error!) {
+        if ((error) != nil) {
+            let alert = UIAlertController(title: "Error", message: "This is an alert.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .`default`, handler: { _ in
+                NSLog("The \"OK\" alert occured.")}))
+            self.present(alert, animated: true, completion: nil)
+            return;
+        }
+        
+        var theError: NSError? = nil
+        
+        self.beanManager?.stopScanning(forBeans_error: &theError)
+        
+        if ((theError) != nil) {
+            let alert = UIAlertController(title: "Error", message: "This is an alert.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .`default`, handler: { _ in
+                NSLog("The \"OK\" alert occured.")}))
+            self.present(alert, animated: true, completion: nil)
+            return;
+        }
+    }
     
+    func BeanManager(beanManager: PTDBeanManager!, didDisconnectBean bean: PTDBean!, error: Error!) {
+        if (myBean == self.myBean) {
+            self.update()
+        }
+    }
+    @IBAction func handlerefresh(_ sender: Any)
+    {
+        if(self.beanManager!.state == BeanManagerState.poweredOn){
+        var theError: NSError? = nil
+        
+        self.beanManager?.startScanning(forBeans_error: &theError)
+        
+        if ((theError) != nil) {
+            let alert = UIAlertController(title: "Error", message: "This is an alert.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .`default`, handler: { _ in
+                NSLog("The \"OK\" alert occured.")
+            }))
+            //let alert: UIAlertController = UIAlertAction(title: "Error", message: theError!.localizedDescription, delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "Ok")
+            //self.present(alert, animated: true, completion: nil)
+        }
+        }
+        
+        (sender as! UIRefreshControl).endRefreshing()
+    
+    }
     
     
     
@@ -124,12 +189,12 @@ class ConnectionViewController: UIViewController, PTDBeanManagerDelegate, PTDBea
      {
      if segue.identifier == "transferToPatientScreen"
      {
-     let controller = segue.destination as! IDViewController
-      //controller.dateString = dateAndTimeLabel.text!
-        //IDViewController.myBean = myBean
+    let controller = segue.destination as! IDViewController
+    //controller.dateString = dateAndTimeLabel.text!
+    //controller.myBean = myBean
      }
-     }
+     
     
     
 }
-
+}

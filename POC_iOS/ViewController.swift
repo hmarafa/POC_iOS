@@ -19,10 +19,13 @@ class ViewController: UIViewController, UITextFieldDelegate, PTDBeanManagerDeleg
     @IBOutlet weak var valueFromBean: UILabel!
     var beanManager: PTDBeanManager!
     var userID: UITextField!
-    
+    @IBOutlet weak var resetBtn: UIButton!
     var maxValue: String = " "
     var dateString: String = " "
-    @IBOutlet weak var timeTaken: UILabel!
+    //@IBOutlet weak var timeTaken: UILabel!
+    @IBOutlet weak var labelMinute: UILabel!
+    @IBOutlet weak var labelSecond: UILabel!
+    @IBOutlet weak var labelMillisecond: UILabel!
     @IBOutlet weak var testProgressLabel: UILabel!
     var myBean: PTDBean!
     var lightState: Bool = false
@@ -33,7 +36,11 @@ class ViewController: UIViewController, UITextFieldDelegate, PTDBeanManagerDeleg
     var newLine: String = ""
     var csvText = ""
     
-
+    weak var timer: Timer?
+    var startTime: Double = 0
+    var time: Double = 0
+    var elapsed: Double = 0
+    var status: Bool = false
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -43,7 +50,7 @@ class ViewController: UIViewController, UITextFieldDelegate, PTDBeanManagerDeleg
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
         beanManager = PTDBeanManager()
-        beanManager!.delegate = self
+        beanManager?.delegate = self
         lightState = false
         
         //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
@@ -61,12 +68,16 @@ class ViewController: UIViewController, UITextFieldDelegate, PTDBeanManagerDeleg
     
     func beanManagerDidUpdateState(_ beanManager: PTDBeanManager!)
     {
-        let scanError: NSError?
-        if beanManager!.state == BeanManagerState.poweredOn
-        {
-            print("made it here")
-            startScanning()
-            print("made it here part 2")
+        if(self.beanManager!.state == BeanManagerState.poweredOn){
+            self.beanManager?.startScanning(forBeans_error: nil)
+            
+        } else if (self.beanManager!.state == BeanManagerState.poweredOff) {
+            let alert = UIAlertController(title: "Error", message: "Turn on bluetooth to continue", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .`default`, handler: { _ in
+                NSLog("The \"OK\" alert occured.")
+            }))
+            self.present(alert, animated: true, completion: nil)
+            return
         }
     }
     
@@ -100,12 +111,50 @@ class ViewController: UIViewController, UITextFieldDelegate, PTDBeanManagerDeleg
            print("DISCOVERED BEAN \nName: \(bean.name), UUID: \(bean.identifier) RSSI: \(bean.rssi)")
         #endif
     }
-    func BeanManager(beanManager: PTDBeanManager!, didConnectToBean bean: PTDBean!, error: NSError!) {
+    func beanManager(_ beanManager: PTDBeanManager!, didConnect bean: PTDBean!, error: Error!) {
+        if ((error) != nil) {
+            let alert = UIAlertController(title: "Error", message: "This is an alert.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .`default`, handler: { _ in
+                NSLog("The \"OK\" alert occured.")}))
+            self.present(alert, animated: true, completion: nil)
+            return;
+        }
         
-    }
+        var theError: NSError? = nil
+        
+            self.beanManager?.stopScanning(forBeans_error: &theError)
+        
+        if ((theError) != nil) {
+            let alert = UIAlertController(title: "Error", message: "This is an alert.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .`default`, handler: { _ in
+                NSLog("The \"OK\" alert occured.")}))
+           self.present(alert, animated: true, completion: nil)
+            return;
+        }
+            }
     
     func BeanManager(beanManager: PTDBeanManager!, didDisconnectBean bean: PTDBean!, error: NSError!) {
         
+    }
+    
+    
+    @IBAction func handlerefresh(_ sender: Any) {
+        if(self.beanManager!.state == BeanManagerState.poweredOn){
+            var theError: NSError? = nil
+            
+            self.beanManager?.startScanning(forBeans_error: &theError)
+            
+            if ((theError) != nil) {
+                let alert = UIAlertController(title: "Error", message: "This is an alert.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .`default`, handler: { _ in
+                    NSLog("The \"OK\" alert occured.")
+                }))
+                //let alert: UIAlertController = UIAlertAction(title: "Error", message: theError!.localizedDescription, delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "Ok")
+                //self.present(alert, animated: true, completion: nil)
+            }
+        }
+        
+        (sender as! UIRefreshControl).endRefreshing()
     }
     
 /*    func connectionChanged(_ notification: Notification) {
@@ -181,8 +230,8 @@ class ViewController: UIViewController, UITextFieldDelegate, PTDBeanManagerDeleg
         if(stringData == "The time is")
         {
             displayTime = true
-              var stringData : String = NSString(data: data, encoding : String.Encoding.ascii.rawValue) as! String
-            timeTaken.text? = stringData
+            var stringData : String = NSString(data: data, encoding : String.Encoding.ascii.rawValue)! as String
+            //timeTaken.text? = stringData
         }
         else if(stringData == "Done")
         {
@@ -220,7 +269,7 @@ class ViewController: UIViewController, UITextFieldDelegate, PTDBeanManagerDeleg
             else if(lastValue == true)
             {
                 testProgressLabel.text = "Test is completed."
-                timeTaken.text? = stringData
+                //timeTaken.text? = stringData
                 newLine += "\n"
                 csvText.append(newLine)
                 //WHEN THEY CLICK SAVE WRITE THE FILE TO THE PATH WE CREATED then send data over to next view controller to export
@@ -270,7 +319,7 @@ class ViewController: UIViewController, UITextFieldDelegate, PTDBeanManagerDeleg
          [self.consoleOutputTextView scrollRangeToVisible: NSMakeRange(self.consoleOutputTextView.string.length, 0)];*/
     }
     
-        func saveData(_ sender: Any)
+       /* func saveData(_ sender: Any)
     {
         let fileName = "TimeData.csv"
         let path = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(fileName)
@@ -285,25 +334,81 @@ class ViewController: UIViewController, UITextFieldDelegate, PTDBeanManagerDeleg
             print("File creating failed")
             print("\(error)")
         }
-    }
-    
-    @IBAction func pressButtonToChangeValue(_ sender: Any)
-    {
-        testProgressLabel.text = "Test in Progress"
-        print(testProgressLabel.text)
-        newLine = ""
-        print ("hi")
-        lightState = true
-        //while (stopReading == false)
-        //   {
-        let data = NSData(bytes: &lightState, length: MemoryLayout<Bool>.size)
-        sendSerialData(beanState: data)
-        //   updateLedStatusText(lightState: lightState)
-        // }
+    }*/
+    func start() {
+        
+        startTime = Date().timeIntervalSinceReferenceDate - elapsed
+        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+        
+        // Set Start/Stop button to true
+        status = true
         
     }
     
-    @IBAction func stopReadingBean(_ sender: Any)
+    func stop() {
+        
+        elapsed = Date().timeIntervalSinceReferenceDate - startTime
+        timer?.invalidate()
+        
+        // Set Start/Stop button to false
+        status = false
+    }
+    
+    @objc func updateCounter() {
+        
+        // Calculate total time since timer started in seconds
+        time = Date().timeIntervalSinceReferenceDate - startTime
+        
+        // Calculate minutes
+        let minutes = UInt8(time / 60.0)
+        time -= (TimeInterval(minutes) * 60)
+        
+        // Calculate seconds
+        let seconds = UInt8(time)
+        time -= TimeInterval(seconds)
+        
+        // Calculate milliseconds
+        let milliseconds = UInt8(time * 100)
+        
+        // Format time vars with leading zero
+        let strMinutes = String(format: "%02d", minutes)
+        let strSeconds = String(format: "%02d", seconds)
+        let strMilliseconds = String(format: "%02d", milliseconds)
+        
+        // Add time vars to relevant labels
+        labelMinute.text = strMinutes
+        labelSecond.text = strSeconds
+        labelMillisecond.text = strMilliseconds
+        
+    }
+    @IBAction func pressButtonToChangeValue(_ sender: UIButton!)
+    {
+        if (status) {
+            stop()
+            
+            //resetBtn.isEnabled = true
+            
+            // If button status is false use start function, relabel button and disable reset button
+        } else {
+            start()
+            
+            //resetBtn.isEnabled = false
+            testProgressLabel.text = "Test in Progress"
+            print(testProgressLabel.text)
+        }
+       
+        //newLine = ""
+        //print ("hi")
+        //lightState = true
+        //while (stopReading == false){
+        //let data = NSData(bytes: &lightState, length: MemoryLayout<Bool>.size)
+        //sendSerialData(beanState: data)
+        //   updateLedStatusText(lightState: lightState)
+      //  }
+        
+    }
+    
+    /*func stopReadingBean(_ sender: Any)
     {
         lightState = false
         print("debugging")
@@ -311,22 +416,26 @@ class ViewController: UIViewController, UITextFieldDelegate, PTDBeanManagerDeleg
         sendSerialData(beanState: data)
         performSegue(withIdentifier: "transfertoEmail", sender: self)
 
-    }
+    }*/
+ 
     @IBAction func viewresult(_ sender: Any) {
-        performSegue(withIdentifier: "transfertoEmail", sender: self)
-
+        //lightState = false
+        print("debugging")
+        //let data = NSData(bytes: &lightState, length: MemoryLayout<Bool>.size)
+       // sendSerialData(beanState: data)
+        //performSegue(withIdentifier: "transfertoEmail", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         if segue.identifier == "transferToEmail"
         {
-            let controller = segue.destination as? EmailViewController
-           controller?.csvText = csvText
+            //let controller = segue.destination as!EmailViewController
+            //controller.csvText = csvText
             //print(userID)
-            controller?.userID.text = userID.text
-            controller?.mPML = maxValue
-            controller?.dTL = dateString
+            //controller.userID.text = userID.text
+            //controller.mPML = maxValue
+            //controller.dateString = dateAndTimeLabel.text!
             //print(emailViewController?.userID.text as Any)
         }
     }

@@ -66,12 +66,11 @@ class IDViewController: UIViewController, PTDBeanManagerDelegate, PTDBeanDelegat
     {
         if segue.identifier == "idSegue"
         {
-            let controller = segue.destination as! ViewController
-            //controller.userID = userID.text!
-            
-            controller.dateString = dateAndTimeLabel.text!
+            //let controller = segue.destination as! ViewController
+            //controller.userID = userID.text
+            //controller.dateString = dateAndTimeLabel.text!
             //controller.myBean = myBean
-            print(dateAndTimeLabel.text as Any)
+            //print(dateAndTimeLabel.text as Any)
         }
     }
     

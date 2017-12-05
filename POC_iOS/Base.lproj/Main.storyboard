@@ -53,21 +53,14 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFe-VN-Ggz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFe-VN-Ggz">
                                 <rect key="frame" x="34" y="88" width="345" height="0.0"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="30"/>
                                 <color key="textColor" red="0.39295888509999999" green="0.024091594970000001" blue="0.084917323409999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asu_fultonengineering_horiz_rgb_maroongold_150ppi" translatesAutoresizingMaskIntoConstraints="NO" id="rNR-5x-EgW">
-                                <rect key="frame" x="135.66666666666666" y="656" width="142.99999999999997" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="143" id="0If-hx-i8i"/>
-                                    <constraint firstAttribute="height" constant="60" id="Lho-D5-n9v"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4w-mT-R6t">
-                                <rect key="frame" x="122" y="511.66666666666674" width="139" height="53"/>
+                                <rect key="frame" x="20" y="538" width="139" height="53"/>
                                 <accessibility key="accessibilityConfiguration" label="Connect"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="NI1-7l-djB"/>
@@ -82,34 +75,62 @@
                                     <segue destination="HGy-nz-OVw" kind="presentation" identifier="transferToPatientScreen" id="2jd-13-Wwl"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" text="Not Connected" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="laB-Qo-fkt">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUt-xu-IHl">
+                                <rect key="frame" x="266" y="538" width="117" height="53"/>
+                                <accessibility key="accessibilityConfiguration" label="Connect"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="117" id="4Ko-ZQ-bwI"/>
+                                    <constraint firstAttribute="height" constant="53" id="g7a-ZC-xec"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="35"/>
+                                <state key="normal" title="Refresh">
+                                    <color key="titleColor" red="0.39295888509999999" green="0.024091594970000001" blue="0.084917323409999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="handlerefresh:" destination="HOz-5y-LTe" eventType="touchUpInside" id="vqb-c2-5Ms"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" text="Not Connected" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="laB-Qo-fkt">
                                 <rect key="frame" x="0.0" y="335" width="375" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="7LB-3c-XHh"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="35"/>
                                 <color key="textColor" red="1" green="0.77647058820000003" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asu_fultonengineering_horiz_rgb_maroongold_150ppi" translatesAutoresizingMaskIntoConstraints="NO" id="rNR-5x-EgW">
+                                <rect key="frame" x="91" y="613" width="233" height="103"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="233" id="0If-hx-i8i"/>
+                                    <constraint firstAttribute="height" constant="103" id="Lho-D5-n9v"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="c1a-UA-7eW" firstAttribute="leading" secondItem="2p4-dz-pW8" secondAttribute="leading" id="0w1-AW-EoL"/>
                             <constraint firstItem="tFe-VN-Ggz" firstAttribute="leading" secondItem="2p4-dz-pW8" secondAttribute="leadingMargin" constant="14" id="1Xj-qR-EW6"/>
-                            <constraint firstItem="W4w-mT-R6t" firstAttribute="leading" secondItem="2p4-dz-pW8" secondAttribute="leadingMargin" constant="102" id="5uW-dt-dcI"/>
+                            <constraint firstItem="W4w-mT-R6t" firstAttribute="baseline" secondItem="nUt-xu-IHl" secondAttribute="baseline" id="57N-We-YGz"/>
+                            <constraint firstItem="W4w-mT-R6t" firstAttribute="leading" secondItem="2p4-dz-pW8" secondAttribute="leadingMargin" id="5uW-dt-dcI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tFe-VN-Ggz" secondAttribute="trailing" constant="15" id="6xT-ui-UwX"/>
                             <constraint firstItem="rRU-5K-wFh" firstAttribute="top" secondItem="rNR-5x-EgW" secondAttribute="bottom" constant="20" id="6zK-Jc-DaW"/>
                             <constraint firstItem="c1a-UA-7eW" firstAttribute="top" secondItem="Puu-nO-aFB" secondAttribute="bottom" id="Bx4-tj-8HN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="laB-Qo-fkt" secondAttribute="trailing" constant="2" id="CQN-FE-H6v"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="laB-Qo-fkt" secondAttribute="trailing" constant="19" id="CQN-FE-H6v"/>
                             <constraint firstItem="c1a-UA-7eW" firstAttribute="centerY" secondItem="k8b-H7-qXq" secondAttribute="centerY" id="EI4-2Q-RnR"/>
-                            <constraint firstItem="W4w-mT-R6t" firstAttribute="top" secondItem="laB-Qo-fkt" secondAttribute="bottom" constant="140" id="G74-NX-Ma6"/>
+                            <constraint firstItem="W4w-mT-R6t" firstAttribute="top" secondItem="laB-Qo-fkt" secondAttribute="bottom" constant="104" id="G74-NX-Ma6"/>
                             <constraint firstItem="vxo-wP-Fa8" firstAttribute="trailing" secondItem="2p4-dz-pW8" secondAttribute="trailingMargin" id="Gam-hO-rev"/>
                             <constraint firstAttribute="trailing" secondItem="c1a-UA-7eW" secondAttribute="trailing" id="K45-hf-fyF"/>
                             <constraint firstItem="vxo-wP-Fa8" firstAttribute="top" secondItem="c1a-UA-7eW" secondAttribute="bottom" constant="76" id="Ldr-Rq-zPT"/>
                             <constraint firstItem="k8b-H7-qXq" firstAttribute="leading" secondItem="2p4-dz-pW8" secondAttribute="leadingMargin" constant="-6" id="Rjn-se-7K8"/>
+                            <constraint firstItem="tFe-VN-Ggz" firstAttribute="top" secondItem="k8b-H7-qXq" secondAttribute="bottom" constant="10" id="UD9-zN-Cre"/>
                             <constraint firstItem="k8b-H7-qXq" firstAttribute="top" secondItem="Puu-nO-aFB" secondAttribute="bottom" constant="17" id="WBY-3g-YYx"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="W4w-mT-R6t" secondAttribute="trailing" constant="102" id="efD-de-FAF"/>
-                            <constraint firstItem="laB-Qo-fkt" firstAttribute="top" secondItem="vxo-wP-Fa8" secondAttribute="bottom" constant="38" id="er2-zz-KGx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="W4w-mT-R6t" secondAttribute="trailing" constant="235" id="efD-de-FAF"/>
+                            <constraint firstItem="laB-Qo-fkt" firstAttribute="top" secondItem="vxo-wP-Fa8" secondAttribute="bottom" constant="42" id="er2-zz-KGx"/>
                             <constraint firstItem="vxo-wP-Fa8" firstAttribute="leading" secondItem="2p4-dz-pW8" secondAttribute="leadingMargin" id="srM-mj-OVL"/>
                             <constraint firstItem="rNR-5x-EgW" firstAttribute="centerX" secondItem="2p4-dz-pW8" secondAttribute="centerX" id="wvx-I3-aIU"/>
-                            <constraint firstItem="laB-Qo-fkt" firstAttribute="leading" secondItem="2p4-dz-pW8" secondAttribute="leadingMargin" constant="2" id="yG4-Gr-TLG"/>
+                            <constraint firstItem="laB-Qo-fkt" firstAttribute="leading" secondItem="2p4-dz-pW8" secondAttribute="leadingMargin" constant="-20" id="yG4-Gr-TLG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nUt-xu-IHl" secondAttribute="trailing" constant="11" id="zGH-ST-PGL"/>
                         </constraints>
                     </view>
                     <connections>
@@ -118,8 +139,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gcZ-9K-pxN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="HOz-5y-LTe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1858.4000000000001" y="-29.23538230884558"/>
+            <point key="canvasLocation" x="-1859.4202898550725" y="-29.347826086956523"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="UXh-eG-zi5">
@@ -245,7 +267,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="dateAndTimeLabel" destination="4Sc-DH-1pK" id="mz6-3S-XPV"/>
+                        <outlet property="dateAndTimeLabel" destination="4Sc-DH-1pK" id="Krb-Aa-ahs"/>
                         <outlet property="userID" destination="Eg8-ps-PK5" id="VaG-fD-ten"/>
                     </connections>
                 </viewController>
@@ -291,13 +313,41 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMC-EN-tVb">
-                                <rect key="frame" x="152" y="240" width="109" height="33"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMC-EN-tVb">
+                                <rect key="frame" x="191.66666666666666" y="240" width="29.666666666666657" height="33"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="28"/>
                                 <color key="textColor" red="1" green="0.77647058823529413" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test Not Started." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S6v-ig-DEY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJl-PW-DHH">
+                                <rect key="frame" x="240" y="240" width="38" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="28"/>
+                                <color key="textColor" red="1" green="0.77647058820000003" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AqK-gY-QGo">
+                                <rect key="frame" x="138" y="240" width="34" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="28"/>
+                                <color key="textColor" red="1" green="0.77647058820000003" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1D-GT-fnz">
+                                <rect key="frame" x="174" y="239" width="9" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="28"/>
+                                <color key="textColor" red="1" green="0.77647058820000003" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEL-p2-IUh">
+                                <rect key="frame" x="229" y="240" width="9" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="28"/>
+                                <color key="textColor" red="1" green="0.77647058820000003" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test Not Started" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S6v-ig-DEY">
                                 <rect key="frame" x="83" y="287" width="248" height="41"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="35"/>
                                 <color key="textColor" red="0.39295888509999999" green="0.024091594970000001" blue="0.084917323409999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -320,11 +370,12 @@
                                     <color key="titleColor" red="0.39295888509999999" green="0.024091594970000001" blue="0.084917323409999995" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="viewresult:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w5u-ou-QjQ"/>
+                                    <action selector="viewresult:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RgN-Vo-AQl"/>
+                                    <segue destination="zMY-vB-ohm" kind="presentation" id="dkO-2O-Fum"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sw3-uu-jtJ">
-                                <rect key="frame" x="219" y="455" width="42" height="61"/>
+                                <rect key="frame" x="252" y="455" width="42" height="61"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="42" id="4rs-WT-CVg"/>
                                 </constraints>
@@ -332,8 +383,23 @@
                                 <color key="textColor" red="1" green="0.77647058820000003" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Percentage Complete:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jy2-ta-CQj">
+                                <rect key="frame" x="21" y="397" width="404" height="41"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="35"/>
+                                <color key="textColor" red="1" green="0.77647058820000003" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNO-xT-iXg">
+                                <rect key="frame" x="135" y="461" width="112" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="112" id="fwW-mc-pbn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
+                                <color key="textColor" red="1" green="0.77647058820000003" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBH-jM-Pg1">
-                                <rect key="frame" x="132" y="116" width="150" height="53"/>
+                                <rect key="frame" x="132" y="123" width="150" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="ugH-NJ-fsN"/>
                                 </constraints>
@@ -345,26 +411,11 @@
                                     <action selector="pressButtonToChangeValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aJY-je-tL5"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Percentage Complete:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jy2-ta-CQj">
-                                <rect key="frame" x="21" y="397" width="404" height="41"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="35"/>
-                                <color key="textColor" red="1" green="0.77647058820000003" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNO-xT-iXg">
-                                <rect key="frame" x="99" y="461" width="112" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="112" id="fwW-mc-pbn"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
-                                <color key="textColor" red="1" green="0.77647058820000003" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="LMo-fh-JRg" firstAttribute="centerX" secondItem="DMC-EN-tVb" secondAttribute="centerX" id="12e-HD-C2G"/>
-                            <constraint firstItem="Sw3-uu-jtJ" firstAttribute="trailing" secondItem="DMC-EN-tVb" secondAttribute="trailing" id="2HD-2V-P2P"/>
+                            <constraint firstItem="Sw3-uu-jtJ" firstAttribute="trailing" secondItem="DMC-EN-tVb" secondAttribute="trailing" constant="72.666666666666686" id="2HD-2V-P2P"/>
                             <constraint firstItem="oiI-Wp-CAz" firstAttribute="leading" secondItem="MsR-5K-O29" secondAttribute="leading" id="3vz-gu-z4a"/>
                             <constraint firstItem="oiI-Wp-CAz" firstAttribute="centerX" secondItem="pBH-jM-Pg1" secondAttribute="centerX" id="4Kd-t4-YZ7"/>
                             <constraint firstItem="IZz-WE-VIx" firstAttribute="leading" secondItem="MsR-5K-O29" secondAttribute="leadingMargin" constant="-6" id="98I-0G-fte"/>
@@ -381,13 +432,13 @@
                             <constraint firstItem="oiI-Wp-CAz" firstAttribute="centerY" secondItem="IZz-WE-VIx" secondAttribute="centerY" id="XES-By-xKf"/>
                             <constraint firstItem="GNO-xT-iXg" firstAttribute="top" secondItem="jy2-ta-CQj" secondAttribute="bottom" constant="23" id="XTJ-jB-pLu"/>
                             <constraint firstItem="jy2-ta-CQj" firstAttribute="centerX" secondItem="S6v-ig-DEY" secondAttribute="centerX" constant="16" id="Zeo-IY-gaa"/>
-                            <constraint firstItem="pBH-jM-Pg1" firstAttribute="top" secondItem="oiI-Wp-CAz" secondAttribute="bottom" constant="15" id="dpr-YC-VlQ"/>
+                            <constraint firstItem="pBH-jM-Pg1" firstAttribute="top" secondItem="oiI-Wp-CAz" secondAttribute="bottom" constant="22" id="dpr-YC-VlQ"/>
                             <constraint firstItem="S6v-ig-DEY" firstAttribute="leading" secondItem="MsR-5K-O29" secondAttribute="leadingMargin" constant="63" id="gdn-xm-kqu"/>
                             <constraint firstItem="IZz-WE-VIx" firstAttribute="top" secondItem="zg2-hZ-SzD" secondAttribute="bottom" constant="17" id="kgz-mm-aOI"/>
                             <constraint firstItem="LMo-fh-JRg" firstAttribute="centerX" secondItem="oiI-Wp-CAz" secondAttribute="centerX" id="lKs-mD-8P9"/>
                             <constraint firstItem="jy2-ta-CQj" firstAttribute="top" secondItem="DMC-EN-tVb" secondAttribute="bottom" constant="124" id="mVK-Af-jcV"/>
                             <constraint firstItem="DMC-EN-tVb" firstAttribute="centerX" secondItem="BZN-g1-Xfd" secondAttribute="centerX" id="maq-RT-M5b"/>
-                            <constraint firstItem="LMo-fh-JRg" firstAttribute="top" secondItem="pBH-jM-Pg1" secondAttribute="bottom" constant="15" id="pnT-Td-EJZ"/>
+                            <constraint firstItem="LMo-fh-JRg" firstAttribute="top" secondItem="pBH-jM-Pg1" secondAttribute="bottom" constant="8" id="pnT-Td-EJZ"/>
                             <constraint firstItem="BZN-g1-Xfd" firstAttribute="top" secondItem="jy2-ta-CQj" secondAttribute="bottom" constant="144" id="rrR-gu-ZH1"/>
                             <constraint firstItem="jy2-ta-CQj" firstAttribute="top" secondItem="DMC-EN-tVb" secondAttribute="bottom" constant="124" id="sL8-Px-Nkh"/>
                             <constraint firstItem="GNO-xT-iXg" firstAttribute="centerY" secondItem="Sw3-uu-jtJ" secondAttribute="centerY" id="sNZ-ot-USr"/>
@@ -396,16 +447,18 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="labelMillisecond" destination="OJl-PW-DHH" id="gff-Lb-BRF"/>
+                        <outlet property="labelMinute" destination="AqK-gY-QGo" id="6iz-v2-jtZ"/>
+                        <outlet property="labelSecond" destination="DMC-EN-tVb" id="n3t-Zu-IEa"/>
                         <outlet property="percentUpdate" destination="GNO-xT-iXg" id="ji5-KU-aO9"/>
+                        <outlet property="resetBtn" destination="pBH-jM-Pg1" id="SQa-ao-SYT"/>
                         <outlet property="testProgressLabel" destination="S6v-ig-DEY" id="2L5-yM-0tl"/>
-                        <outlet property="timeTaken" destination="DMC-EN-tVb" id="bA9-R0-kCX"/>
                         <outlet property="valueFromBean" destination="LMo-fh-JRg" id="tFT-GJ-yRG"/>
-                        <segue destination="4Mf-Ye-wa7" kind="showDetail" identifier="transferToEmail" id="lGt-73-IiX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-95.200000000000003" y="-26.53673163418291"/>
+            <point key="canvasLocation" x="-95.652173913043484" y="-26.90217391304348"/>
         </scene>
         <!--Email View Controller-->
         <scene sceneID="KOd-vX-a8I">
@@ -426,12 +479,9 @@
                                 <state key="normal" title="Back">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="RsH-4A-heP"/>
-                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your data has now been saved locally. You can send it to a health care provider below." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0iP-5L-SHJ">
-                                <rect key="frame" x="33" y="289" width="353" height="149"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Your data has now been saved locally. You can send it to a health care provider below." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0iP-5L-SHJ">
+                                <rect key="frame" x="14" y="289" width="372" height="149"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="149" id="OcH-lE-K62"/>
@@ -440,15 +490,8 @@
                                 <color key="textColor" red="0.39295888509999999" green="0.024091594970000001" blue="0.084917323409999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j13-yP-chZ">
-                                <rect key="frame" x="282" y="126" width="112" height="41"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="35"/>
-                                <color key="textColor" red="0.39295888509999999" green="0.024091594970000001" blue="0.084917323409999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5i-fi-F5E">
-                                <rect key="frame" x="308" y="227" width="86" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Harafa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j13-yP-chZ">
+                                <rect key="frame" x="289.33333333333331" y="126" width="104.66666666666669" height="41"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="35"/>
                                 <color key="textColor" red="0.39295888509999999" green="0.024091594970000001" blue="0.084917323409999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -468,10 +511,10 @@
                                 <color key="textColor" red="0.39295888509999999" green="0.024091594970000001" blue="0.084917323409999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qgt-Dt-Ztz">
-                                <rect key="frame" x="308" y="180" width="86" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qgt-Dt-Ztz">
+                                <rect key="frame" x="282" y="181" width="112" height="41"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="35"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="27"/>
                                 <color key="textColor" red="0.39295888509999999" green="0.024091594970000001" blue="0.084917323409999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -511,14 +554,14 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4u-B5-a4v">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4u-B5-a4v">
                                 <rect key="frame" x="76" y="511" width="228" height="53"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="35"/>
                                 <state key="normal" title="Start New Test">
                                     <color key="titleColor" red="0.39295888509999999" green="0.024091594970000001" blue="0.084917323409999995" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="backToTest" id="DA9-6M-Iwg"/>
+                                    <segue destination="HGy-nz-OVw" kind="presentation" id="pe3-Fb-qqs"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asu_fultonengineering_horiz_rgb_maroongold_150ppi" translatesAutoresizingMaskIntoConstraints="NO" id="qk4-tU-LWY" userLabel="asu_fultonengineering_horiz_rgb_maroongold_150ppi">
@@ -528,17 +571,32 @@
                                     <constraint firstAttribute="height" constant="60" id="w3t-Oc-fzI"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmq-Sv-fwO">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmq-Sv-fwO">
                                 <rect key="frame" x="111" y="450" width="158" height="53"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="sendit" label="sendit">
+                                    <accessibilityTraits key="traits" button="YES"/>
+                                </accessibility>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="35"/>
                                 <state key="normal" title="Send Data">
                                     <color key="titleColor" red="0.39295888509999999" green="0.024091594970000001" blue="0.084917323409999995" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hU0-X5-HaZ">
+                                <rect key="frame" x="177" y="589" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="exportCSV:" destination="4Mf-Ye-wa7" eventType="touchUpInside" id="8P4-4c-UV5"/>
+                                    <action selector="sendEmailButtonTapped:" destination="4Mf-Ye-wa7" eventType="touchUpInside" id="n6D-gd-LhL"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="120 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5i-fi-F5E">
+                                <rect key="frame" x="328" y="230" width="65.666666666666686" height="40.999999999999972"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="35"/>
+                                <color key="textColor" red="0.39295888509999999" green="0.024091594970000001" blue="0.084917323409999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -549,7 +607,7 @@
                             <constraint firstItem="yut-eq-gGI" firstAttribute="firstBaseline" secondItem="UX1-lS-Hjz" secondAttribute="firstBaseline" id="6kl-Nz-7Kj"/>
                             <constraint firstItem="UX1-lS-Hjz" firstAttribute="top" secondItem="wDi-Iy-V1R" secondAttribute="bottom" constant="17" id="7l1-7v-dG7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0iP-5L-SHJ" secondAttribute="trailing" constant="8" id="7oK-QX-b0u"/>
-                            <constraint firstItem="D4u-B5-a4v" firstAttribute="trailing" secondItem="0Ra-dv-hha" secondAttribute="trailingMargin" id="8SR-MK-0tf"/>
+                            <constraint firstItem="D4u-B5-a4v" firstAttribute="trailing" secondItem="0Ra-dv-hha" secondAttribute="trailingMargin" constant="-90" id="8SR-MK-0tf"/>
                             <constraint firstItem="0iP-5L-SHJ" firstAttribute="leading" secondItem="0Ra-dv-hha" secondAttribute="leadingMargin" constant="13" id="EEy-DB-bPE"/>
                             <constraint firstItem="j13-yP-chZ" firstAttribute="top" secondItem="Ssf-N9-e2N" secondAttribute="bottom" constant="25" id="FaR-oa-EEv"/>
                             <constraint firstItem="yut-eq-gGI" firstAttribute="firstBaseline" secondItem="UX1-lS-Hjz" secondAttribute="baseline" id="GTu-Oa-gen"/>
@@ -573,30 +631,71 @@
                             <constraint firstItem="Esc-fe-7Cj" firstAttribute="leading" secondItem="0Ra-dv-hha" secondAttribute="leadingMargin" constant="17" id="jGb-1x-u7A"/>
                             <constraint firstItem="yut-eq-gGI" firstAttribute="leading" secondItem="UX1-lS-Hjz" secondAttribute="leading" id="jmO-so-QmK"/>
                             <constraint firstItem="j13-yP-chZ" firstAttribute="trailing" secondItem="0Ra-dv-hha" secondAttribute="trailingMargin" id="jvI-zm-iSV"/>
-                            <constraint firstItem="pmq-Sv-fwO" firstAttribute="leading" secondItem="0Ra-dv-hha" secondAttribute="leadingMargin" constant="1" id="l3l-jZ-25W"/>
+                            <constraint firstItem="pmq-Sv-fwO" firstAttribute="leading" secondItem="0Ra-dv-hha" secondAttribute="leadingMargin" constant="91" id="l3l-jZ-25W"/>
                             <constraint firstItem="Ssf-N9-e2N" firstAttribute="leading" secondItem="5Ke-2t-5XQ" secondAttribute="leading" id="mLB-iN-VXH"/>
                             <constraint firstItem="5Ke-2t-5XQ" firstAttribute="leading" secondItem="0Ra-dv-hha" secondAttribute="leading" id="mte-eu-Slk"/>
                             <constraint firstItem="5Ke-2t-5XQ" firstAttribute="top" secondItem="wDi-Iy-V1R" secondAttribute="bottom" id="pGA-R0-LSn"/>
                             <constraint firstItem="q5i-fi-F5E" firstAttribute="top" secondItem="Qgt-Dt-Ztz" secondAttribute="bottom" constant="6" id="sal-tr-jub"/>
-                            <constraint firstItem="D4u-B5-a4v" firstAttribute="top" secondItem="0iP-5L-SHJ" secondAttribute="bottom" constant="12" id="tja-Si-JY8"/>
+                            <constraint firstItem="D4u-B5-a4v" firstAttribute="top" secondItem="0iP-5L-SHJ" secondAttribute="bottom" constant="73" id="tja-Si-JY8"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="dateTimeLabel" destination="Qgt-Dt-Ztz" id="fOA-Fc-lYG"/>
-                        <outlet property="moleculesPerMicroL" destination="q5i-fi-F5E" id="Lkf-Br-vu0"/>
-                        <outlet property="userID" destination="j13-yP-chZ" id="ZH8-Q3-0vp"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AtC-il-Cuo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="652" y="-25.637181409295355"/>
+            <point key="canvasLocation" x="650.72463768115949" y="-26.086956521739133"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="x0F-Su-fJs">
+            <objects>
+                <viewController id="zMY-vB-ohm" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dru-pL-zVr"/>
+                        <viewControllerLayoutGuide type="bottom" id="iWC-dl-rJl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bIa-Xc-Qrg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnD-Ry-wvL">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.39295888509999999" green="0.024091594970000001" blue="0.084917323409999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.39295888509999999" green="0.024091594970000001" blue="0.084917323409999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FlexDx" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBe-9I-WCO">
+                                <rect key="frame" x="10" y="10" width="131" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="40"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMG-cm-rZ9">
+                                <rect key="frame" x="117" y="422" width="158" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="sendit" label="sendit">
+                                    <accessibilityTraits key="traits" button="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="35"/>
+                                <state key="normal" title="Send Data">
+                                    <color key="titleColor" red="0.39295888509999999" green="0.024091594970000001" blue="0.084917323409999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kwF-pb-CZU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1330.4347826086957" y="3.2608695652173916"/>
         </scene>
     </scenes>
     <resources>
         <image name="asu_fultonengineering_horiz_rgb_maroongold_150ppi" width="3516" height="1165"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lGt-73-IiX"/>
-        <segue reference="RsH-4A-heP"/>
+        <segue reference="pe3-Fb-qqs"/>
     </inferredMetricsTieBreakers>
 </document>

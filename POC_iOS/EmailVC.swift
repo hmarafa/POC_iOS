@@ -9,18 +9,17 @@
 import UIKit
 import MessageUI
 
-class EmailViewController: UIViewController, MFMailComposeViewControllerDelegate {
+class EmailVC: UIViewController, MFMailComposeViewControllerDelegate {
     
     
-    @IBOutlet weak var dateLabel : UILabel!
-    @IBOutlet weak var moleculesPerMicroL: UILabel!
+    //@IBOutlet weak var dateLabel : UILabel!
+    //@IBOutlet weak var moleculesPerMicroL: UILabel!
     var mPML: String = " "
-    @IBOutlet weak var userID: UITextField!
+    //@IBOutlet weak var userID: UITextField!
     var userIDString: String = " "
     var csvText : String = " "
     var result : String = " "
-    @IBOutlet weak var senditTapped: UIButton!
-    @IBOutlet weak var sendButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
@@ -52,23 +51,23 @@ class EmailViewController: UIViewController, MFMailComposeViewControllerDelegate
     }
     
     /*@IBAction func exportCSV(_ sender: UIButton!)
-    {
-        let fileName = "TimeData.csv"
-        let path = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(fileName)
-        do
-        {
-            try csvText.write(to: path!, atomically: true, encoding: String.Encoding.utf8)
-        }
-        catch
-        {
-            print("Failed to export file")
-        }
-        let emailViewController = configuredMailComposeViewController()
-        if MFMailComposeViewController.canSendMail()
-        {
-            self.present(emailViewController, animated: true, completion: nil)
-        }
-    }*/
+     {
+     let fileName = "TimeData.csv"
+     let path = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(fileName)
+     do
+     {
+     try csvText.write(to: path!, atomically: true, encoding: String.Encoding.utf8)
+     }
+     catch
+     {
+     print("Failed to export file")
+     }
+     let emailViewController = configuredMailComposeViewController()
+     if MFMailComposeViewController.canSendMail()
+     {
+     self.present(emailViewController, animated: true, completion: nil)
+     }
+     }*/
     
     @IBAction func sendEmailButtonTapped(_ sender: Any) {
         let mailComposeViewController = configuredMailComposeViewController()
@@ -99,33 +98,33 @@ class EmailViewController: UIViewController, MFMailComposeViewControllerDelegate
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)
     }
-   /* func configuredMailComposeViewController() -> MFMailComposeViewController
-    {
-        let emailController = MFMailComposeViewController()
-        emailController.mailComposeDelegate = self
-        emailController.setSubject("CSV File")
-        emailController.setMessageBody("Here is the data", isHTML: false)
-        
-        let data = csvText.data(using: String.Encoding.utf8, allowLossyConversion: false)!
-        
-        emailController.addAttachmentData(data, mimeType: "text/csv", fileName: "TimeData.csv")
-        return emailController
-    }
-    
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        controller.dismiss(animated: true, completion: nil)
-        //pop up with notification saying "your message has been sent!"
-    }
-    */
+    /* func configuredMailComposeViewController() -> MFMailComposeViewController
+     {
+     let emailController = MFMailComposeViewController()
+     emailController.mailComposeDelegate = self
+     emailController.setSubject("CSV File")
+     emailController.setMessageBody("Here is the data", isHTML: false)
+     
+     let data = csvText.data(using: String.Encoding.utf8, allowLossyConversion: false)!
+     
+     emailController.addAttachmentData(data, mimeType: "text/csv", fileName: "TimeData.csv")
+     return emailController
+     }
+     
+     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+     controller.dismiss(animated: true, completion: nil)
+     //pop up with notification saying "your message has been sent!"
+     }
+     */
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         if segue.identifier == "backToTest"
         {
             //let controller = segue.destination as! ViewController
-           // controller.userID.text = userID.text!
-           // print(userID.text as Any)
-       //controller.dateString = dateAndTimeLabel.text!
+            // controller.userID.text = userID.text!
+            // print(userID.text as Any)
+            //controller.dateString = dateAndTimeLabel.text!
             //controller.dateString = dateTimeLabel.text!
         }
     }
@@ -139,4 +138,5 @@ class EmailViewController: UIViewController, MFMailComposeViewControllerDelegate
      */
     
 }
+
 
