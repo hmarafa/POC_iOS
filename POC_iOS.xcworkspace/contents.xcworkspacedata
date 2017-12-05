@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:POC_iOS.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Bean-iOS-OSX-SDK">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/CorePlot">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Headers">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Local Podspecs">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Manifest.lock">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Target Support Files">
+   </FileRef>
+   <FileRef
+      location = "group:Podfile.lock">
+   </FileRef>
+   <FileRef
+      location = "group:Podfile">
+   </FileRef>
+</Workspace>

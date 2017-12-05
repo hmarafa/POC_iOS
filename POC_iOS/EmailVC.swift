@@ -12,13 +12,15 @@ import MessageUI
 class EmailVC: UIViewController, MFMailComposeViewControllerDelegate {
     
     
-    //@IBOutlet weak var dateLabel : UILabel!
+    @IBOutlet weak var dateLabel : UILabel!
     //@IBOutlet weak var moleculesPerMicroL: UILabel!
     var mPML: String = " "
-    //@IBOutlet weak var userID: UITextField!
+   
     var userIDString: String = " "
     var csvText : String = " "
     var result : String = " "
+    
+    @IBOutlet weak var fff: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,9 +33,9 @@ class EmailVC: UIViewController, MFMailComposeViewControllerDelegate {
         formatter.dateStyle = .short
         
         // get the date time String from the date object
-        let result = formatter.string(from: currentDateTime) // October 8, 2017 at 10:48:53 PM
+        //let result = formatter.string(from: currentDateTime) // October 8, 2017 at 10:48:53 PM
         
-        dateLabel.text = result
+        //dateLabel.text = result
         //labelSecond.text = strSeconds
         //userID.text = userIDString
         //moleculesPerMicroL.text = mPML
@@ -83,8 +85,8 @@ class EmailVC: UIViewController, MFMailComposeViewControllerDelegate {
         mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
         
         mailComposerVC.setToRecipients(["someone@somewhere.com"])
-        mailComposerVC.setSubject("Sending you an in-app e-mail...")
-        mailComposerVC.setMessageBody("Sending e-mail in-app is not so bad!", isHTML: false)
+        mailComposerVC.setSubject("Flex Dx Results for Patient Harafa")
+        mailComposerVC.setMessageBody("Your data has now been saved locally. You can send it to a health care provider below.", isHTML: false)
         
         return mailComposerVC
     }
